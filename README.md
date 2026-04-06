@@ -86,7 +86,7 @@ This allows the system to move beyond individual predictions and provide a broad
 ├── label_mapping.json # Label encoding mapping
 ├── mental_distress_test_set.csv # Test dataset
 ├── Mental_Distress_Dataset-original.csv # Original raw dataset
-├── Mental_Distress_Dataset-updated.csv # Updated and preprocessed dataset with null rows dropped
+├── Mental_Distress_Dataset_updated.csv # Updated and preprocessed dataset with null rows dropped
 ├── community_stress_fullTraining_notebook.ipynb # Training and experimentation from scratch
 ├── community_stress_modelLoading_notebook.ipynb # Training and experimentation using saved trained model
 ├── README.md
