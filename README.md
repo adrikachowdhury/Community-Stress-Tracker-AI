@@ -103,7 +103,7 @@ pip install streamlit transformers torch emoji emoticon_fix pandas scikit-learn 
 
 ---
 
-## Running the Application
+## Running the Application Locally
 
 To launch the application: `streamlit run app.py`
 
