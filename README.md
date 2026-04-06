@@ -92,14 +92,13 @@ This allows the system to move beyond individual predictions and provide a broad
 ├── README.md
 ```
 
-
 ---
 
 ## Installation
 
 Install the required dependencies in your local terminal:
 ```
-pip install streamlit transformers torch emoji emoticon_fix pandas scikit-learn
+pip install streamlit transformers torch emoji emoticon_fix pandas scikit-learn gdown
 ```
 
 ---
