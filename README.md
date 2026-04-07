@@ -58,7 +58,7 @@ The implementation focuses on:
 - Clear and modular code structure  
 - Reproducible preprocessing and evaluation steps  
 - Efficient inference using saved model weights  
-- Deployment through a Streamlit interface for real-time interaction  
+- Deployment through Streamlit for real-time interaction using the saved model weights
 
 The system is fully functional and allows users to input text and receive immediate predictions along with stress analysis.
 
