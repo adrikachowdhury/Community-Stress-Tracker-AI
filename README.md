@@ -163,3 +163,13 @@ This project is created for the hackathon purpose, intended for educational and 
 ---
 
 **Project Contributors:** Adrika Chowdhury, Tustee Mazumdar
+
+---
+
+## Acknowledgement
+
+We sincerely thank the creators of the **MentalDistress** dataset for making their work publicly available, which made this project possible:
+
+```
+Prity, Fahmida Yeasmin; Munira, Tasmia Chowdhury; Ahmed Shayeed, Sayem; Chowdhury, Md Jalal Uddin (2026), “MentalDistress: A multi-class social media text dataset for mental health–related emotion detection”, Mendeley Data, V2, doi: 10.17632/b42wr437hg.2
+```
