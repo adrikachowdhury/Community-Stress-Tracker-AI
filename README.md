@@ -1,4 +1,4 @@
-# Community Stress Tracker AI
+# 🧠 Community Stress Tracker AI
 
 Live Demo: [Community Stress Tracker AI- Streamlit](https://community-stress-tracker-ai.streamlit.app/)
 
