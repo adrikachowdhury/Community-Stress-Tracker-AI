@@ -54,13 +54,13 @@ This approach combines machine learning with simple logic-based aggregation, mak
 
 The categorical labels were encoded using a label encoder, and this mapping was saved to ensure consistent predictions during model deployment as `label.mapping.json`:
 
-| Label     | ID |
-|-----------|----|
-| Anxious   | 0  |
-| Depressed | 1  |
-| Frustrated| 2  |
-| Others    | 3  |
-| Suicidal  | 4  |
+| Labels     | IDs |
+|------------|-----|
+| Anxious    | 0   |
+| Depressed  | 1   |
+| Frustrated | 2   |
+| Others     | 3   |
+| Suicidal   | 4   |
 
 ---
 
