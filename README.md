@@ -50,6 +50,20 @@ This approach combines machine learning with simple logic-based aggregation, mak
 
 ---
 
+## Label Encoding
+
+The categorical labels were encoded using a label encoder, and this mapping was saved to ensure consistent predictions during model deployment as `label.mapping.json`:
+
+| Label     | ID |
+|-----------|----|
+| Anxious   | 0  |
+| Depressed | 1  |
+| Frustrated| 2  |
+| Others    | 3  |
+| Suicidal  | 4  |
+
+---
+
 ## Model and Implementation
 
 The project uses DistilBERT for sequence classification. The model is trained on a labeled dataset named [MentalDistress](https://data.mendeley.com/datasets/b42wr437hg/2), a curated and annotated English dataset categorized into five psychological states and containing mental health-related categories, and optimized using class-weighted loss to address imbalance. We also performed basic hyperparameter tuning (learning rate, batch size, and epochs) to identify an optimal configuration, which was then used to train the model and save the weights for deployment.
@@ -170,6 +184,4 @@ This project is created for the hackathon purpose, intended for educational and 
 
 We sincerely thank the creators of the **MentalDistress** dataset for making their work publicly available, which made this project possible:
 
-```
 Prity, Fahmida Yeasmin; Munira, Tasmia Chowdhury; Ahmed Shayeed, Sayem; Chowdhury, Md Jalal Uddin (2026), “MentalDistress: A multi-class social media text dataset for mental health–related emotion detection”, Mendeley Data, V2, doi: 10.17632/b42wr437hg.2
-```
