@@ -52,7 +52,7 @@ This approach combines machine learning with simple logic-based aggregation, mak
 
 ## Model and Implementation
 
-The project uses DistilBERT for sequence classification. The model is trained on a labeled dataset named `MentalDistress`[https://data.mendeley.com/datasets/b42wr437hg/2], a curated and annotated set of English dataset categorized into five psychological states and containing mental health-related categories, and optimized using class-weighted loss to address imbalance. We also performed basic hyperparameter tuning (learning rate, batch size, and epochs) to identify an optimal configuration, which was then used to train the model and save the weights for deployment.
+The project uses DistilBERT for sequence classification. The model is trained on a labeled dataset named [MentalDistress](https://data.mendeley.com/datasets/b42wr437hg/2), a curated and annotated English dataset categorized into five psychological states and containing mental health-related categories, and optimized using class-weighted loss to address imbalance. We also performed basic hyperparameter tuning (learning rate, batch size, and epochs) to identify an optimal configuration, which was then used to train the model and save the weights for deployment.
 
 | Hyperparameters | Tested Range        | Opimal Settings |
 |-----------------|---------------------|-----------------|
