@@ -111,8 +111,8 @@ This allows the system to move beyond individual predictions and provide a broad
 ├── Mental_Distress_Dataset-original.csv # Original raw dataset
 ├── Mental_Distress_Dataset_updated.csv # Updated and preprocessed dataset with null rows dropped
 ├── Notebooks # Colab notebook folder
-  ├── com_stress_fullTraining_notebook.ipynb # Training and experimentation from scratch
-  ├── com_stress_modelLoading_notebook.ipynb # Training and experimentation using saved trained model
+    ├── com_stress_fullTraining_notebook.ipynb # Training and experimentation from scratch
+    ├── com_stress_modelLoading_notebook.ipynb # Training and experimentation using saved trained model
 ├── README.md
 ```
 
@@ -143,7 +143,7 @@ To launch the application: `streamlit run app.py`
 | Frustrated | 2    |
 | Others     | 1    |
 
-Scores are normalized to a 0–10 scale for easier interpretation.
+Scores are normalized to a 0–10 scale for easier interpretation. The stress scores are then aggregated in batches of 16 posts to compute mean stress levels for analysis.
 
 ---
 
@@ -177,7 +177,7 @@ This project is created for the hackathon purpose, intended for educational and 
 
 ---
 
-**Project Contributors:** Adrika Chowdhury, Tustee Mazumdar
+**Project Contributors:** Adrika Chowdhury and Tustee Mazumdar
 
 ---
 
