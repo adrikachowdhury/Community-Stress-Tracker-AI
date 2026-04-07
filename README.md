@@ -8,7 +8,7 @@ Community Stress Tracker AI is a data-driven Natural Language Processing (NLP) p
 
 ## Overview
 
-This project was developed as part of a beginner-friendly hackathon, **Predict4Good**, which focused on building predictive solutions that address real-world problems. It explores how machine learning and structured logic can be used to interpret unstructured text and transform it into actionable insights.
+This project was developed as part of a beginner-friendly hackathon, [**Predict4Good**](https://predict4good-hackathon.devpost.com/?_gl=1*yooc35*_gcl_au*MTkyNjE2NjIxOC4xNzc0NzkwMjcw*_ga*MjYyMTMyNjIuMTc3NDc5MDI3MQ..*_ga_0YHJK3Y10M*czE3NzQ3OTAyNzEkbzEkZzEkdDE3NzQ3OTMwNDMkajMwJGwwJGgw), which focused on building predictive solutions that address real-world problems. It explores how machine learning and structured logic can be used to interpret unstructured text and transform it into actionable insights.
 
 The system is designed to:
 - Identify emotional signals from text using a trained model (DistilBERT)
@@ -38,7 +38,7 @@ Such insights can be valuable to researchers, organizations, and platforms that 
 
 The system follows a structured, data-driven pipeline:
 
-1. Text preprocessing to standardize input
+1. Text preprocessing to standardize input (*Lowercasing, whitespace removal, emoji and emoticon conversion, and removal of user mentions*)
 2. Conversion of the textual labels (*Suicidal, Depressed, Anxious, Frustrated, Others*) into numeric form using label encoding
 3. Tokenization using a pretrained DistilBERT tokenizer  
 4. Emotion classification using a fine-tuned DistilBERT model  
@@ -53,6 +53,13 @@ This approach combines machine learning with simple logic-based aggregation, mak
 ## Model and Implementation
 
 The project uses DistilBERT for sequence classification. The model is trained on a labeled dataset named `MentalDistress`[https://data.mendeley.com/datasets/b42wr437hg/2], a curated and annotated set of English dataset categorized into five psychological states and containing mental health-related categories, and optimized using class-weighted loss to address imbalance. We also performed basic hyperparameter tuning (learning rate, batch size, and epochs) to identify an optimal configuration, which was then used to train the model and save the weights for deployment.
+
+| Hyperparameters | Tested Range        | Opimal Settings |
+|-----------------|---------------------|-----------------|
+| Learning Rate   | 2e-5, 3e-5, 5e-5    | 3e-5            |
+| Batch Size      | 16, 32              | 32              |
+| Epochs          | 3, 4, 5             | 4               |
+| Max Length      | 128, 256            | 256             |
 
 The implementation focuses on:
 - Clear and modular code structure
