@@ -1,6 +1,6 @@
 # 🧠 Community Stress Tracker AI
 
-Live Demo: [Community Stress Tracker AI- Streamlit](https://community-stress-tracker-ai.streamlit.app/)
+**Live Demo:** [Community Stress Tracker AI- Streamlit](https://community-stress-tracker-ai.streamlit.app/)
 
 Community Stress Tracker AI is a data-driven Natural Language Processing (NLP) project that analyzes textual inputs to detect emotional states and estimate stress levels. The system aggregates these signals across multiple inputs to provide a broader view of stress patterns, with the goal of supporting meaningful insights for social good.
 
