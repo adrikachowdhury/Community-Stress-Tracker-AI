@@ -107,6 +107,8 @@ The system is fully functional and allows users to input text and receive immedi
 ├── Notebooks # Colab notebook folder
     ├── com_stress_fullTraining_notebook.ipynb # Training and experimentation from scratch
     ├── com_stress_modelLoading_notebook.ipynb # Training and experimentation using saved trained model
+├── assets
+    ├── demo.gif # GIF of our project demo
 ├── README.md
 ```
 
