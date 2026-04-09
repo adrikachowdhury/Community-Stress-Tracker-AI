@@ -11,22 +11,16 @@ import numpy as np
 from transformers import DistilBertTokenizer, DistilBertForSequenceClassification
 from emoticon_fix import emoticon_fix
 
-# -----------------------------
-# 🔹 Load label mapping
-# -----------------------------
+# Load label mapping
 with open("label_mapping.json", "r") as f:
     label_mapping = json.load(f)
 
 id_to_label = {v: k for k, v in label_mapping.items()}
 
-# -----------------------------
-# 🔹 Load tokenizer
-# -----------------------------
+# Load tokenizer
 tokenizer = DistilBertTokenizer.from_pretrained("distilbert-base-uncased")
 
-# -----------------------------
-# 🔹 Download and load model
-# -----------------------------
+# Download and load model
 MODEL_PATH = "distilbert_emotion_model.pth"
 MODEL_URL = "https://drive.google.com/uc?id=1x_OONKXfGx0I7uPzGzYOdR_5HOUVVdQy"
 
@@ -50,9 +44,7 @@ model.eval()
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 model.to(device)
 
-# -----------------------------
-# 🔹 Preprocessing (same as training)
-# -----------------------------
+# Preprocessing (same as training)
 def preprocess_text(text):
     text = text.lower()
     text = re.sub(r'\s+', ' ', text).strip()
@@ -61,9 +53,7 @@ def preprocess_text(text):
     text = re.sub(r'@\w+', '', text)
     return text
 
-# -----------------------------
-# 🔹 Stress mapping and helpers
-# -----------------------------
+# Stress mapping and helpers
 stress_mapping = {
     'Suicidal': 5,
     'Depressed': 4,
@@ -83,9 +73,7 @@ def get_stress_level(score):
     else:
         return "High"
 
-# -----------------------------
-# 🔹 Prediction function
-# -----------------------------
+# Prediction function
 def predict(text):
     text = preprocess_text(text)
     encoding = tokenizer(
@@ -111,9 +99,7 @@ def predict(text):
 
     return label, score, normalized, level
 
-# -----------------------------
-# 🔹 Streamlit UI
-# -----------------------------
+# Streamlit UI
 st.title("🧠 Stress Detection from Text")
 st.write("Predict emotional state and stress level from user posts.")
 
@@ -135,9 +121,7 @@ for i in range(num_posts):
 
         user_scores.append(score)
 
-# -----------------------------
-# 🔹 Aggregated stress
-# -----------------------------
+# Aggregated stress
 if user_scores:
     avg_score = np.mean(user_scores)
     norm_avg = normalize_score(avg_score)
