@@ -99,18 +99,18 @@ The system is fully functional and allows users to input text and receive immedi
 
 ## Project Structure
 ```
-├── app.py # Streamlit application
-├── label_mapping.json # Label encoding mapping
 ├── Notebooks # Colab notebook folder
     ├── com_stress_fullTraining_notebook.ipynb # Training and experimentation from scratch
     ├── com_stress_modelLoading_notebook.ipynb # Training and experimentation using saved trained model
-├── assets
+├── assets # Miscellaneous assets
     ├── demo.gif # GIF of our project demo
-├── Mental_Distress_test_set.csv # Test dataset
 ├── Mental_Distress_Dataset-original.csv # Original raw dataset
 ├── Mental_Distress_Dataset_updated.csv # Updated and preprocessed dataset with null rows dropped
-
-├── README.md
+├── Mental_Distress_test_set.csv # Test dataset
+├── README.md # README file containing details of the project
+├── app.py # Streamlit application
+├── label_mapping.json # Label encoding mapping
+├── requirements.txt # Text file containing required libraries
 ```
 
 ---
