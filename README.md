@@ -114,7 +114,7 @@ The system is fully functional and allows users to input text and receive immedi
 
 ## Installation
 
-Install the required dependencies in your local terminal:
+Install the following dependencies in your local terminal using `requirements.txt`:
 ```
 pip install streamlit transformers torch emoji emoticon_fix pandas scikit-learn gdown
 ```
