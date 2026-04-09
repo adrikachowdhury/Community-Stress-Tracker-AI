@@ -101,14 +101,15 @@ The system is fully functional and allows users to input text and receive immedi
 ```
 ├── app.py # Streamlit application
 ├── label_mapping.json # Label encoding mapping
-├── mental_distress_test_set.csv # Test dataset
-├── Mental_Distress_Dataset-original.csv # Original raw dataset
-├── Mental_Distress_Dataset_updated.csv # Updated and preprocessed dataset with null rows dropped
 ├── Notebooks # Colab notebook folder
     ├── com_stress_fullTraining_notebook.ipynb # Training and experimentation from scratch
     ├── com_stress_modelLoading_notebook.ipynb # Training and experimentation using saved trained model
 ├── assets
     ├── demo.gif # GIF of our project demo
+├── Mental_Distress_test_set.csv # Test dataset
+├── Mental_Distress_Dataset-original.csv # Original raw dataset
+├── Mental_Distress_Dataset_updated.csv # Updated and preprocessed dataset with null rows dropped
+
 ├── README.md
 ```
 
