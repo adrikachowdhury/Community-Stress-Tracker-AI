@@ -100,7 +100,6 @@ The system is fully functional and allows users to input text and receive immedi
 ## Project Structure
 ```
 ├── app.py # Streamlit application
-├── distilbert_emotion_model.pth # Trained model weights
 ├── label_mapping.json # Label encoding mapping
 ├── mental_distress_test_set.csv # Test dataset
 ├── Mental_Distress_Dataset-original.csv # Original raw dataset
