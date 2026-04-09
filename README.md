@@ -137,7 +137,7 @@ To launch the application: `streamlit run app.py`
 | Frustrated | 2    |
 | Others     | 1    |
 
-We map emotional states to numeric scores and then normalize them to a 0-10 scale. Aggregating across posts allows us to capture the overall community stress trend.
+We map emotional states to numeric scores based on their severity level and then normalize them to a 0-10 scale. Aggregating across posts allows us to capture the overall community stress trend.
 
 ---
 
