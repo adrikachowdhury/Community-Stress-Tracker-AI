@@ -4,6 +4,7 @@
 **Live Demo:** [Community Stress Tracker AI- Streamlit](https://community-stress-tracker-ai.streamlit.app/)
 
 ![Application Demo](assets/demo.gif)
+
 Community Stress Tracker AI converts everyday text into measurable community stress insights, helping reveal broader emotional patterns at scale. The system aggregates these signals across multiple inputs to provide a broader view of stress patterns, with the goal of supporting meaningful insights for social good.
 
 ---
