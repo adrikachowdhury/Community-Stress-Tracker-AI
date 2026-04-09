@@ -4,14 +4,13 @@
 **Live Demo:** [Community Stress Tracker AI- Streamlit](https://community-stress-tracker-ai.streamlit.app/)
 
 ![Application Demo](assets/demo.gif)
-
-Community Stress Tracker AI is a data-driven Natural Language Processing (NLP) project that analyzes textual inputs to detect emotional states and estimate stress levels. The system aggregates these signals across multiple inputs to provide a broader view of stress patterns, with the goal of supporting meaningful insights for social good.
+Community Stress Tracker AI converts everyday text into measurable community stress insights, helping reveal broader emotional patterns at scale. The system aggregates these signals across multiple inputs to provide a broader view of stress patterns, with the goal of supporting meaningful insights for social good.
 
 ---
 
 ## Overview
 
-This project was developed as part of a beginner-friendly hackathon, [**Predict4Good**](https://predict4good-hackathon.devpost.com/?_gl=1*yooc35*_gcl_au*MTkyNjE2NjIxOC4xNzc0NzkwMjcw*_ga*MjYyMTMyNjIuMTc3NDc5MDI3MQ..*_ga_0YHJK3Y10M*czE3NzQ3OTAyNzEkbzEkZzEkdDE3NzQ3OTMwNDMkajMwJGwwJGgw), which focused on building predictive solutions that address real-world problems. It explores how machine learning and structured logic can be used to interpret unstructured text and transform it into actionable insights.
+This project was developed as part of a beginner-friendly hackathon, [**Predict4Good**](https://predict4good-hackathon.devpost.com/?_gl=1*yooc35*_gcl_au*MTkyNjE2NjIxOC4xNzc0NzkwMjcw*_ga*MjYyMTMyNjIuMTc3NDc5MDI3MQ..*_ga_0YHJK3Y10M*czE3NzQ3OTAyNzEkbzEkZzEkdDE3NzQ3OTMwNDMkajMwJGwwJGgw), which focused on building predictive solutions that address real-world problems. By leveraging Natural Language Processing (NLP), it shows how machine learning can turn messy social media text into actionable insights about community stress trends.
 
 The system is designed to:
 - Identify emotional signals from text using a trained model (DistilBERT)
@@ -49,7 +48,7 @@ The system follows a structured, data-driven pipeline:
 6. Normalizing scores to a 0–10 range  
 7. Aggregating scores to estimate overall stress levels  
 
-This approach combines machine learning with simple logic-based aggregation, making it both interpretable and practical for real-world use.
+We process posts in batches of 16 to compute mean stress, making the aggregation efficient for community-level trends. Overall, this approach combines machine learning with simple logic-based aggregation, making it both interpretable and practical for real-world use.
 
 ---
 
@@ -71,12 +70,12 @@ The categorical labels were encoded using a label encoder, and this mapping was 
 
 The project uses DistilBERT for sequence classification. The model is trained on a labeled dataset named [MentalDistress](https://data.mendeley.com/datasets/b42wr437hg/2), a curated and annotated English dataset categorized into five psychological states and containing mental health-related categories, and optimized using class-weighted loss to address imbalance. We also performed basic hyperparameter tuning (learning rate, batch size, and epochs) to identify an optimal configuration, which was then used to train the model and save the weights for deployment.
 
-| Hyperparameters | Tested Range        | Opimal Settings |
-|-----------------|---------------------|-----------------|
-| Learning Rate   | 2e-5, 3e-5, 5e-5    | 3e-5            |
-| Batch Size      | 16, 32              | 32              |
-| Epochs          | 3, 4, 5             | 4               |
-| Max Length      | 128, 256            | 256             |
+| Hyperparameters | Tested Range        | Optimal Settings |
+|-----------------|---------------------|------------------|
+| Learning Rate   | 2e-5, 3e-5, 5e-5    | 3e-5             |
+| Batch Size      | 16, 32              | 32               |
+| Epochs          | 3, 4, 5             | 4                |
+| Max Length      | 128, 256            | 256              |
 
 The implementation focuses on:
 - Clear and modular code structure
@@ -94,14 +93,6 @@ The system is fully functional and allows users to input text and receive immedi
 - Stress scoring and normalization
 - Aggregation of multiple inputs into a single stress indicator
 - Interactive web interface using Streamlit
-
----
-
-## Model Deployment
-
-Rather than focusing solely on classification, this project introduces an additional layer of interpretation by transforming categorical outputs into a continuous stress scale and aggregating them across inputs.
-
-This allows the system to move beyond individual predictions and provide a broader perspective on community-based stress trends, making the solution more meaningful and aligned with real-world applications.
 
 ---
 
@@ -146,7 +137,7 @@ To launch the application: `streamlit run app.py`
 | Frustrated | 2    |
 | Others     | 1    |
 
-Scores are normalized to a 0–10 scale for easier interpretation. The stress scores are then aggregated in batches of 16 posts to compute mean stress levels for analysis.
+We map emotional states to numeric scores and then normalize them to a 0-10 scale. Aggregating across posts allows us to capture the overall community stress trend.
 
 ---
 
@@ -176,7 +167,9 @@ This project is created for the hackathon purpose, intended for educational and 
 - Incorporating time-based tracking for trend analysis
 - Extending to community-level dashboards
 - Integrating additional datasets for improved generalization
-- Exploring explainable AI techniques for transparency 
+- Exploring explainable AI techniques for transparency
+
+These improvements aim to provide communities and researchers with a clearer, real-time picture of mental well-being trends.
 
 ---
 
