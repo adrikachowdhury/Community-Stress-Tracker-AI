@@ -1,5 +1,5 @@
 # 🧠 Community Stress Tracker AI
-<img width="600" height="700" alt="Community Stress Tracker AI" src="https://github.com/user-attachments/assets/a2a158d3-cd21-43cf-8cb4-a69dad2aa4b9" />
+<img width="550" height="400" alt="Community Stress Tracker AI" src="https://github.com/user-attachments/assets/a2a158d3-cd21-43cf-8cb4-a69dad2aa4b9" />
 
 **Live Demo:** [Community Stress Tracker AI- Streamlit](https://community-stress-tracker-ai.streamlit.app/)
 
