@@ -104,6 +104,7 @@ The system is fully functional and allows users to input text and receive immedi
     ├── com_stress_modelLoading_notebook.ipynb # Training and experimentation using saved trained model
 ├── assets # Miscellaneous assets
     ├── demo.gif # GIF of our project demo
+├── EDA.ipynb # Exploratory data analysis of the raw dataset
 ├── Mental_Distress_Dataset-original.csv # Original raw dataset
 ├── Mental_Distress_Dataset_updated.csv # Updated and preprocessed dataset with null rows dropped
 ├── Mental_Distress_test_set.csv # Test dataset
