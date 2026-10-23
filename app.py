@@ -22,7 +22,7 @@ tokenizer = DistilBertTokenizer.from_pretrained("distilbert-base-uncased")
 
 # Download and load model
 MODEL_PATH = "distilbert_emotion_model.pth"
-MODEL_URL = "https://drive.google.com/uc?id=1x_OONKXfGx0I7uPzGzYOdR_5HOUVVdQy"
+MODEL_URL = "https://drive.google.com/file/d/1e17G3PDGe3ls79bvvuKKGwVxUBAoCRvw/view?usp=sharing"
 
 # Download model if not already present
 if not os.path.exists(MODEL_PATH):
